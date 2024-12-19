@@ -18,8 +18,8 @@ export const TracksList = () => {
             // className="flex-1 flex flex-col gap-5 py-4 pb-24 overflow-y-auto h-full"
             // onScroll={handleScroll}
             >
-        {tracksData.map((track, index) => (
-            <TrackItem track={track} key={index} />
+        {tracksData.map((track) => (
+            <TrackItem track={track} key={track.id} />
             ))}
         </div>
   );
