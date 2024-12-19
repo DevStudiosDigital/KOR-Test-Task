@@ -10,6 +10,7 @@ import createSongIcon from "/public/create-song.png";
 
 import { HiOutlineInformationCircle } from "react-icons/hi";
 import Image from "next/image";
+import { cn } from "@/lib/utils";
 
 const dialogContent = [
   {
@@ -64,14 +65,19 @@ const dialogContent = [
   },
 ];
 
-export const Header = () => {
+interface HeaderProps {
+  title?: string;
+  className?: string;
+}
+
+export const Header = ({ title, className }: HeaderProps) => {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   const openDialog = () => setIsDialogOpen(true);
   const closeDialog = () => setIsDialogOpen(false);
 
   return (
-    <section className="py-7">
+    <section className={cn("py-7", className)}>
       <div className="container">
         <div className="flex items-center justify-between">
           <div className="flex size-6 flex-col justify-around">
@@ -79,7 +85,7 @@ export const Header = () => {
             <div className="h-0.5 w-5 bg-foreground/75"></div>
             <div className="h-0.5 w-5 bg-foreground/75"></div>
           </div>
-          <h2 className="text-2xl font-bold tracking-tight">Create a Song</h2>
+          <h2 className="text-2xl font-bold tracking-tight">{title}</h2>
           <div
             className="flex size-10 items-center justify-center rounded-full border border-primary"
             onClick={openDialog}

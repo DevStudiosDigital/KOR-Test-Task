@@ -48,8 +48,8 @@ export const ControlsTab = () => {
   };
 
   return (
-    <div className="container">
-      <div className="flex flex-col gap-3">
+    <div className="container relative">
+      <div className="flex flex-col gap-3 h-[550px] overflow-y-auto pr-4 custom-scrollbar">
         {songs.map(({ id, name, artist, isMuted }) => (
           <div
             key={id}
@@ -60,7 +60,7 @@ export const ControlsTab = () => {
             )}
           >
             <div
-              className="col-span-3 flex-1 overflow-hidden border-r border-border px-4 py-5"
+              className="col-span-3 flex-1 overflow-hidde border-r border-border px-4 py-5"
               onClick={() => handlePlayPause(id)}
             >
               <h4 className={cn("font-bold", isMuted && "text-muted")}>
@@ -95,7 +95,8 @@ export const ControlsTab = () => {
             </div>
           </div>
         ))}
-        <div className="mt-1 self-end">
+      </div>
+      <div className="flex mt-10 justify-end">
           <button className="inline-flex items-center gap-1.5 rounded-full bg-[#F96718] py-0.5 pl-3 pr-0.5 shadow-lg transition-colors hover:bg-[#FF7B3A]">
             <span className="text-[10px] font-bold leading-4 text-white">
               Auto Refresh
@@ -104,7 +105,6 @@ export const ControlsTab = () => {
               <FiRefreshCw className="size-4 text-white" />
             </div>
           </button>
-        </div>
       </div>
     </div>
   );

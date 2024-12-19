@@ -1,8 +1,14 @@
+"use client";
 import { FiRefreshCw } from "react-icons/fi";
 import { Button } from "./button";
+import { ProcessingModal } from "./processing-modal";
+import { useState } from "react";
 
 export const Player = () => {
+  const [isProcessingModalOpen, setIsProcessingModalOpen] = useState(false);
+
   return (
+    <>
     <section>
       <div className="container py-5">
         <div className="flex items-center justify-center gap-4">
@@ -14,9 +20,11 @@ export const Player = () => {
             <div className="h-3 w-1 bg-[#101317]"></div>
             <div className="h-3 w-1 bg-[#101317]"></div>
           </div>
-          <Button className="text-xs">Create Song</Button>
+          <Button className="text-xs" onClick={() => setIsProcessingModalOpen(true)}>Create Song</Button>
         </div>
       </div>
     </section>
+    <ProcessingModal isOpen={isProcessingModalOpen} />
+    </>
   );
 };

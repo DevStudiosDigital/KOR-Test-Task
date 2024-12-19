@@ -15,7 +15,7 @@ export default function Home() {
 
   return (
     <div className="container">
-      <Header />
+      <Header title="Create a Song" />
       <Tabs tabs={tabs} defaultValue="controls" />
       <Divider />
       <Player />

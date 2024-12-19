@@ -90,3 +90,105 @@ export const genresData = [
   { id: 17, name: "Jazzy Hits" },
   { id: 18, name: "Easy Folk" },
 ];
+
+export const tracksData = [
+  {
+    id: 1,
+    name: "Melodies",
+    artist: "Deadmuo5",
+    image: "/track-a.png",
+    active: true,
+  },
+  {
+    id: 2,
+    name: "Track 2",
+    artist: "Artist",
+    image: "/track-b.png",
+    active: false,
+  },
+  {
+    id: 3,
+    name: "Track 3",
+    artist: "Artist",
+    image: "/track-c.png",
+    active: false,
+  },
+  {
+    id: 4,
+    name: "Track 4",
+    artist: "Artist",
+    image: "/track-a.png",
+    active: false,
+  },
+  {
+    id: 5,
+    name: "Track 5",
+    artist: "Artist",
+    image: "/track-b.png",
+    active: false,
+  },
+  {
+    id: 6,
+    name: "Track 6",
+    artist: "Artist",
+    image: "/track-c.png",
+    active: false,
+  },
+  {
+    id: 7,
+    name: "Track 7",
+    artist: "Artist",
+    image: "/track-a.png",
+    active: false,
+  },
+  {
+    id: 8,
+    name: "Track 8",
+    artist: "Artist",
+    image: "/track-b.png",
+    active: false,
+  },
+  {
+    id: 9,
+    name: "Track 9",
+    artist: "Artist",
+    image: "/track-c.png",
+    active: false,
+  },
+  {
+    id: 10,
+    name: "Track 10",
+    artist: "Artist",
+    image: "/track-a.png",
+    active: false,
+  },
+  {
+    id: 11,
+    name: "Track 11",
+    artist: "Artist",
+    image: "/track-b.png",
+    active: false,
+  },
+  {
+    id: 12,
+    name: "Track 12",
+    artist: "Artist",
+    image: "/track-c.png",
+    active: false,
+  },
+  {
+    id: 13,
+    name: "Track 13",
+    artist: "Artist",
+    image: "/track-a.png",
+    active: false,
+  },
+];
+
+export interface Track {
+  id: number;
+  name: string;
+  artist: string;
+  image: string;
+  active: boolean;
+}

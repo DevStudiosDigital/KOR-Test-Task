@@ -10,10 +10,19 @@ export default {
   ],
   theme: {
     extend: {
-        fontFamily:{
-            sans: ["var(--font-dm-sans)", ...fontFamily.sans],
-            special: ["var(--font-inter)", ...fontFamily.sans],
+      keyframes: {
+        loading: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(100%)" },
         },
+      },
+      animation: {
+        loading: "loading 1.5s ease-in-out infinite",
+      },
+      fontFamily: {
+        sans: ["var(--font-dm-sans)", ...fontFamily.sans],
+        special: ["var(--font-inter)", ...fontFamily.sans],
+      },
       colors: {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
@@ -22,7 +31,7 @@ export default {
         border: "hsl(var(--border))",
         accent: "hsl(var(--accent))",
         muted: "hsl(var(--muted))",
-        destructive: "hsl(var(--destructive))"
+        destructive: "hsl(var(--destructive))",
       },
       borderRadius: {
         lg: `var(--radius)`,
@@ -32,10 +41,10 @@ export default {
       container: {
         center: true,
         padding: {
-            DEFAULT: "0.75rem",
-            lg: "1.5rem",
+          DEFAULT: "0.75rem",
+          lg: "1.5rem",
         },
-    },
+      },
     },
   },
   plugins: [],
