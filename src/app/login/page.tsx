@@ -1,6 +1,6 @@
 import LoginAlert from "@/components/login-alert";
 import MediaPlayer from "@/components/media-player";
-import { Track, tracksData } from "@/lib/constants";
+import { tracksData } from "@/lib/constants";
 import Image from "next/image";
 
 export default function LoginPage() {

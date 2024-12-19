@@ -28,6 +28,7 @@ export default {
         foreground: "hsl(var(--foreground))",
         primary: "hsl(var(--primary))",
         secondary: "hsl(var(--secondary))",
+        danger: "hsl(var(--danger))",
         border: "hsl(var(--border))",
         accent: "hsl(var(--accent))",
         muted: "hsl(var(--muted))",

@@ -27,7 +27,7 @@ export default function MediaPlayer({ currentTrack }: MediaPlayerProps) {
                         <div className="h-4 w-1.5 bg-white"></div>
                     </div>
                 </div>
-                <div className="h-1 w-full bg-white/20 mt-2">
+                <div className="h-1 w-full  mt-2">
                     <div className="h-full w-1/2 bg-primary"></div>
                 </div>
             </div>

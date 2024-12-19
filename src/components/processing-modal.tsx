@@ -16,17 +16,18 @@ export const ProcessingModal = ({ isOpen }: ProcessingModalProps) => {
           return () => clearTimeout(timer);
         }
       }, [isOpen, router]);
-    
       if (!isOpen) return null;
 
   return (
-        <Modal isOpen={isOpen}>
-            <h2 className="text-xl font-semibold text-white">Processing...</h2>
-            <p className="text-center text-sm text-white">
-              Please do not close this screen until processing is complete
-            </p>
-            <div className="h-0.5 w-full mt-4 overflow-hidden rounded-full bg-white/10">
-              <div className="h-full w-1/2 animate-[loading_1.5s_ease-in-out_infinite] bg-white"></div>
+        <Modal isOpen={isOpen} variant="processing">
+            <div className="px-8 text-center">
+                <h2 className="text-xl font-semibold text-white">Processing...</h2>
+                <p className="text-sm text-white">
+                Please do not close this screen until processing is complete
+                </p>
+                <div className="h-0.5 w-full mt-4 overflow-hidden rounded-full bg-white/10">
+                    <div className="h-full w-1/2 animate-[loading_1.5s_ease-in-out_infinite] bg-white"></div>
+                </div>
             </div>
         </Modal>
   );
