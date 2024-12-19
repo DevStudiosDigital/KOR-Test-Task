@@ -1,6 +1,5 @@
 import { ArtistTab } from "@/components/artist-tab";
 import { ControlsTab } from "@/components/controls-tab";
-import { Divider } from "@/components/divider";
 import { GenreTab } from "@/components/genre-tab";
 import { Player } from "@/components/player";
 import { TabItem, Tabs } from "@/components/tabs";
@@ -14,11 +13,12 @@ export default function Home() {
   ];
 
   return (
-    <div className="container">
-      <Header />
-      <Tabs tabs={tabs} defaultValue="controls" />
-      <Divider />
+    <>
+      <div className="container">
+        <Header />
+        <Tabs tabs={tabs} defaultValue="controls" />
+      </div>
       <Player />
-    </div>
+    </>
   );
 }

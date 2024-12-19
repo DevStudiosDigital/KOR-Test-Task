@@ -1,9 +1,11 @@
 import { FiRefreshCw } from "react-icons/fi";
 import { Button } from "./button";
+import { Divider } from "./divider";
 
 export const Player = () => {
   return (
-    <section>
+    <section className="sticky bottom-0 z-50 bg-background">
+      <Divider />
       <div className="container py-5">
         <div className="flex items-center justify-center gap-4">
           <Button variant={"secondary"}>

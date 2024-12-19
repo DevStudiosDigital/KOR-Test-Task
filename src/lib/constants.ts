@@ -5,6 +5,10 @@ export const songsData = [
   { id: 4, name: "Vocals", artist: "KORUS - Riding" },
   { id: 5, name: "Piano", artist: "KORUS - Riding" },
   { id: 6, name: "Strings", artist: "KORUS - Riding" },
+  { id: 7, name: "Synth", artist: "KORUS - Riding" },
+  { id: 8, name: "Drums", artist: "KORUS - Riding" },
+  { id: 9, name: "Bass", artist: "KORUS - Riding" },
+  { id: 10, name: "Guitar", artist: "KORUS - Riding" },
 ];
 
 export const artistsData = [
